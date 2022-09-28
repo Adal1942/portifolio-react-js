@@ -39,7 +39,7 @@ export const Contact = () => {
         if (result.code === 200) {
             setStatus({ success: true, message: 'Message sent successfully'});
         } else {
-            setStatus({ seccess: false, message: 'Something went wrong, please try again later.'})
+            setStatus({ success: false, message: 'Something went wrong, please try again later.'})
         }
     };
 
@@ -54,7 +54,7 @@ export const Contact = () => {
                         <h2>Get In Touch</h2>
                         <form onSubmit={handleSubmit}>
                             <Row>
-                                <Col sm={6} className="px-1">
+                                <Col sm={6} className="px1">
                                     <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                                 </Col>
                                 <Col sm={6} className="px1">

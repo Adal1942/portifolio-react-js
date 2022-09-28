@@ -9,10 +9,10 @@ export const Banner = () => {
 
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Web Developer" , "Web Designer" ];
+    const toRotate = [ "veloper" , "signer" ];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const period = 2000;
+    const period = 700;
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -39,7 +39,7 @@ export const Banner = () => {
         } else if(isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1)
-            setDelta(500);
+            setDelta(100);
         }
     } 
     return(
@@ -51,8 +51,9 @@ export const Banner = () => {
                         {({ isVisible }) => 
                             <div className={isVisible ? "animated__animated animate__fadeIn": ""}>
                                 <span className="tagline">Bem vindo ao meu Portifólio</span>
-                                <h1>{`Oi, me chamo Adauto `}<span className="wrap">{text}</span></h1>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <h1>{`Oi, me chamo Adauto`}</h1>
+                                <h1><span className="wrap">{`Web De`}{text}</span></h1>
+                                <p>Ta sendo bem complicado fazer esse projeto mas eu estou gostando muito de aprender mais sobre React Js, é uma experiência muito incrível, terminei agora a vídeo aula e estou aplicando minhas ideias nele, logo eu posto mais sobre, e é isso, até pessoal.</p>
                                 <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
                             </div>}
                         </TrackVisibility>

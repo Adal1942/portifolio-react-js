@@ -11,34 +11,43 @@ export const Projects = () => {
     
     const projects = [
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Made in Pixel",
+            description: "Site de vendas",
+            go: ('https://adal1942.github.io/Novo-site/'),
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "Você sabe?",
+            description: "Jogo de perguntas",
+            go: ('https://do-you-know-test.netlify.app/'),
             imgUrl: projImg2,
         },
         {
+            title: "Genius",
+            description: "Jogo Genius",
+            go: ('https://adal1942.github.io/Genius/'),
+            imgUrl: projImg3,
+        },
+    ];
+
+    const projects2 = [
+        {
             title: "Business Startup",
-            description: "Design & Development",
+            description: "Jogo Genius",
+            go: ('https://adal1942.github.io/Genius/'),
             imgUrl: projImg3,
         },
         {
             title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
-        },
-        {
-            title: "Business Startup",
-            description: "Design & Development",
+            description: "Jogo de perguntas",
+            go: ('https://do-you-know-test.netlify.app/'),
             imgUrl: projImg2,
         },
         {
             title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg3,
+            description: "Site de vendas",
+            go: ('https://adal1942.github.io/Novo-site/'),
+            imgUrl: projImg1,
         },
     ];
     
@@ -62,9 +71,6 @@ export const Projects = () => {
                             <Nav.Item>
                                 <Nav.Link eventKey="second">Tab Two</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="third">Tabe Three</Nav.Link>
-                            </Nav.Item>
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
@@ -78,8 +84,17 @@ export const Projects = () => {
                                     }
                                 </Row>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</Tab.Pane>
-                            <Tab.Pane eventKey="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</Tab.Pane>
+                            <Tab.Pane eventKey="second">
+                                <Row>
+                                    {
+                                        projects2.map((project, index) => {
+                                            return (
+                                                <ProjectCard key={index} {...project} />
+                                            )
+                                        })
+                                    }
+                                </Row>
+                            </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
                     </Col>
